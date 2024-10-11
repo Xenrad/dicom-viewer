@@ -56,7 +56,11 @@
     "lerna:cache": "./netlify-lerna-cache.sh",
     "lerna:restore": "./netlify-lerna-restore.sh",
     "lerna:customVersion": "node version.mjs",
-    "link-list": "npm ls --depth=0 --link=true"
+    "link-list": "npm ls --depth=0 --link=true",
+
+    "build:local": "lerna run build:local --stream",
+    "build:prod": "lerna run build:prod --stream",
+    "dev:local": "lerna run dev:local --stream"
   },
   "dependencies": {
     "@babel/runtime": "^7.20.13",

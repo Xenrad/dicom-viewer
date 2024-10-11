@@ -46,21 +46,21 @@ function ViewerHeader({
   const { t } = useTranslation();
   const { show, hide } = useModal();
   const { hotkeyDefinitions, hotkeyDefaults } = hotkeysManager;
-  const versionNumber = process.env.VERSION_NUMBER;
-  const commitHash = process.env.COMMIT_HASH;
+  // const versionNumber = process.env.VERSION_NUMBER;
+  // const commitHash = process.env.COMMIT_HASH;
 
   const menuOptions = [
-    {
-      title: t('Header:About'),
-      icon: 'info',
-      onClick: () =>
-        show({
-          content: AboutModal,
-          title: t('AboutModal:About OHIF Viewer'),
-          contentProps: { versionNumber, commitHash },
-          containerDimensions: 'max-w-4xl max-h-4xl',
-        }),
-    },
+    // {
+    //   title: t('Header:About'),
+    //   icon: 'info',
+    //   onClick: () =>
+    //     show({
+    //       content: AboutModal,
+    //       title: t('AboutModal:About OHIF Viewer'),
+    //       contentProps: { versionNumber, commitHash },
+    //       containerDimensions: 'max-w-4xl max-h-4xl',
+    //     }),
+    // },
     {
       title: t('Header:Preferences'),
       icon: 'settings',
@@ -121,7 +121,7 @@ function ViewerHeader({
       appConfig={appConfig}
     >
       <ErrorBoundary context="Primary Toolbar">
-        <div className="relative flex justify-center gap-[4px]">
+        <div className="bg-secondary-dark relative flex justify-center gap-[4px] rounded-xl px-2 py-1">
           <Toolbar servicesManager={servicesManager} />
         </div>
       </ErrorBoundary>

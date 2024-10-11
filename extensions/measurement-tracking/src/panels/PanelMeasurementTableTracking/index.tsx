@@ -203,7 +203,7 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }: wi
       </div>
       {!appConfig?.disableEditing && (
         <div className="flex justify-center p-4">
-          <ActionButtons
+          {/* <ActionButtons
             t={t}
             actions={[
               {
@@ -221,7 +221,15 @@ function PanelMeasurementTableTracking({ servicesManager, extensionManager }: wi
               },
             ]}
             disabled={disabled}
-          />
+          /> */}
+
+          <button
+            onClick={exportReport}
+            className="rounded-lg border border-[#323132] px-4 py-2 text-base text-black w-full disabled:cursor-not-allowed disabled:opacity-50 bg-primary-light/70 disabled:bg-[#1C1C1E] disabled:text-white uppercase"
+            disabled={disabled}
+          >
+            Export
+          </button>
         </div>
       )}
     </>

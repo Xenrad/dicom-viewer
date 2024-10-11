@@ -116,7 +116,7 @@ export default function PanelRoiThresholdSegmentation({
 
   return (
     <>
-      <div className="mt-2 mb-10 flex flex-col">
+      <div className="flex flex-col py-3">
         <div className="invisible-scrollbar overflow-y-auto overflow-x-hidden">
           {tmtvValue !== null ? (
             <div className="bg-secondary-dark flex items-baseline justify-between px-2 py-1">

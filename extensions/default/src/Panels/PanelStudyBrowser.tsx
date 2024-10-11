@@ -54,7 +54,7 @@ function PanelStudyBrowser({
       });
     }
 
-    viewportGridService.setDisplaySetsForViewports(updatedViewports);
+  viewportGridService.setDisplaySetsForViewports(updatedViewports);
   };
 
   // ~~ studyDisplayList
