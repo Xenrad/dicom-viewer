@@ -53,8 +53,8 @@ function ToolboxUI(props: withAppTypes) {
   const render = () => {
     return (
       <>
-        <div className="flex flex-col bg-black">
-          <div className="bg-primary-dark mt-0.5 flex flex-wrap py-2">
+        <div className="flex flex-col">
+          <div className="mt-0.5 flex flex-wrap justify-center py-2">
             {toolbarButtons.map((toolDef, index) => {
               if (!toolDef) {
                 return null;
@@ -79,11 +79,11 @@ function ToolboxUI(props: withAppTypes) {
                   key={id}
                   className={classnames({
                     [toolClasses]: true,
-                    'border-secondary-light flex flex-col items-center justify-center rounded-md border':
+                    'flex flex-col items-center justify-center rounded-md border border-[#323132]':
                       true,
                   })}
                 >
-                  <div className="flex rounded-md bg-black">
+                  <div className="flex rounded-md p-2">
                     <Component
                       {...componentProps}
                       {...props}
@@ -98,7 +98,7 @@ function ToolboxUI(props: withAppTypes) {
             })}
           </div>
         </div>
-        <div className="bg-primary-dark h-auto px-2">
+        <div className="h-auto px-2">
           {activeToolOptions && <ToolSettings options={activeToolOptions} />}
         </div>
       </>

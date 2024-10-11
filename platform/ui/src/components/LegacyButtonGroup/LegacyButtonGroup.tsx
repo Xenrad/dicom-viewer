@@ -22,8 +22,8 @@ const roundedClasses = {
 
 const borderClasses = {
   text: {
-    vertical: 'border-t-0 border-l-0 border-r-0 last:border-b-0',
-    horizontal: 'border-l-0 border-t-0 border-b-0 last:border-r-0',
+    vertical: 'border-t-0 border-l-0 border-r-0 border-b-0',
+    horizontal: 'border-l-0 border-t-0 border-b-0 border-r-0',
   },
   outlined: {
     vertical: 'border border-b-0 last:border-b',
@@ -99,7 +99,7 @@ const LegacyButtonGroup = ({
     <div
       role="group"
       className={classnames(
-        'group',
+        'group rounded-xl border border-[#323132] p-2',
         className,
         orientationClasses[orientation],
         fullWidth ? fullWidthDisplayClass : baseDisplayClass

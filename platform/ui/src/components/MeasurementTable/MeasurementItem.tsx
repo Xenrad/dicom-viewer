@@ -35,9 +35,9 @@ const MeasurementItem = ({
   return (
     <div
       className={classnames(
-        'group flex cursor-pointer border border-transparent bg-black outline-none transition duration-300',
+        'group flex cursor-pointer border border-[#323132] outline-none transition duration-300 opacity-70 rounded',
         {
-          'border-primary-light overflow-hidden rounded': isActive,
+          'border-primary-light overflow-hidden': isActive,
         }
       )}
       onMouseEnter={onMouseEnter}
@@ -48,9 +48,9 @@ const MeasurementItem = ({
       data-cy={'measurement-item'}
     >
       <div
-        className={classnames('w-6 py-1 text-center text-base transition duration-300', {
-          'bg-primary-light active text-black': isActive,
-          'bg-primary-dark text-primary-light group-hover:bg-secondary-main': !isActive,
+        className={classnames('w-6 py-1 text-center text-base transition duration-300  text-black', {
+          'bg-primary-light active': isActive,
+          'bg-[#323132] text-primary-light group-hover:bg-primary-light/70': !isActive,
         })}
         onMouseEnter={() => setIsIndexHovering(true)}
         onMouseLeave={() => setIsIndexHovering(false)}
@@ -59,11 +59,7 @@ const MeasurementItem = ({
           <Icon
             name="close"
             className={classnames(
-              'mx-auto mt-1 w-[10px] text-center transition duration-500 hover:opacity-80',
-              {
-                'bg-primary-light text-black': isActive,
-                'bg-primary-dark text-primary-light group-hover:bg-secondary-main': !isActive,
-              }
+              'mx-auto mt-1 w-[10px] text-center transition duration-500 hover:opacity-80 text-black',
             )}
             onClick={onDeleteHandler}
           />
@@ -76,13 +72,13 @@ const MeasurementItem = ({
         {displayText.map((line, i) => (
           <span
             key={i}
-            className="border-primary-light border-l pl-2 text-base text-white"
+            className="border-primary-light border-l pl-2 text-base text-white/70"
             dangerouslySetInnerHTML={{ __html: line }}
           ></span>
         ))}
         <Icon
           className={classnames(
-            'absolute w-3 cursor-pointer text-white transition duration-300 hover:opacity-80',
+            'absolute w-3 cursor-pointer text-white/70 transition duration-300 hover:opacity-80',
             { 'invisible mr-2 opacity-0': !isActive && !isHovering },
             { 'opacity-1 visible': !isActive && isHovering }
           )}

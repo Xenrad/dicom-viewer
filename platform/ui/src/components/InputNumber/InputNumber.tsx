@@ -54,7 +54,7 @@ const InputNumber: React.FC<{
   labelPosition = 'left',
   inputClassName = 'text-white bg-primary-dark text-[14px]',
   sizeClassName,
-  inputContainerClassName = 'bg-primary-dark border-secondary-light border rounded-[4px]',
+  inputContainerClassName = 'bg-[#090909] border-primary-light/70 border rounded-[4px]',
 }) => {
   const [numberValue, setNumberValue] = useState(value);
   const [isFocused, setIsFocused] = useState(false);

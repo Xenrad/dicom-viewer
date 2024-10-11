@@ -16,7 +16,7 @@ const ThumbnailList = ({
   return (
     <div
       id="ohif-thumbnail-list"
-      className="ohif-scrollbar study-min-height overflow-y-hidden bg-black py-5"
+      className="ohif-scrollbar divide-[#323132]/65 flex flex-col divide-y overflow-y-hidden"
     >
       {thumbnails.map(
         ({
@@ -41,41 +41,50 @@ const ThumbnailList = ({
           switch (componentType) {
             case 'thumbnail':
               return (
-                <Thumbnail
+                <div
+                  className="py-4 px-2"
                   key={displaySetInstanceUID}
-                  displaySetInstanceUID={displaySetInstanceUID}
-                  dragData={dragData}
-                  description={description}
-                  seriesNumber={seriesNumber}
-                  numInstances={numInstances}
-                  countIcon={countIcon}
-                  imageSrc={imageSrc}
-                  imageAltText={imageAltText}
-                  messages={messages}
-                  isActive={isActive}
-                  onClick={() => onThumbnailClick(displaySetInstanceUID)}
-                  onDoubleClick={() => onThumbnailDoubleClick(displaySetInstanceUID)}
-                />
+                >
+                  <Thumbnail
+                    displaySetInstanceUID={displaySetInstanceUID}
+                    dragData={dragData}
+                    description={description}
+                    seriesNumber={seriesNumber}
+                    numInstances={numInstances}
+                    countIcon={countIcon}
+                    imageSrc={imageSrc}
+                    imageAltText={imageAltText}
+                    messages={messages}
+                    isActive={isActive}
+                    onClick={() => onThumbnailClick(displaySetInstanceUID)}
+                    onDoubleClick={() => onThumbnailDoubleClick(displaySetInstanceUID)}
+                  />
+                </div>
               );
             case 'thumbnailTracked':
               return (
-                <ThumbnailTracked
+                <div
+                  className="py-4"
                   key={displaySetInstanceUID}
-                  displaySetInstanceUID={displaySetInstanceUID}
-                  dragData={dragData}
-                  description={description}
-                  seriesNumber={seriesNumber}
-                  numInstances={numInstances}
-                  countIcon={countIcon}
-                  imageSrc={imageSrc}
-                  imageAltText={imageAltText}
-                  messages={messages}
-                  isTracked={isTracked}
-                  isActive={isActive}
-                  onClick={() => onThumbnailClick(displaySetInstanceUID)}
-                  onDoubleClick={() => onThumbnailDoubleClick(displaySetInstanceUID)}
-                  onClickUntrack={() => onClickUntrack(displaySetInstanceUID)}
-                />
+                >
+                  <ThumbnailTracked
+                    key={displaySetInstanceUID}
+                    displaySetInstanceUID={displaySetInstanceUID}
+                    dragData={dragData}
+                    description={description}
+                    seriesNumber={seriesNumber}
+                    numInstances={numInstances}
+                    countIcon={countIcon}
+                    imageSrc={imageSrc}
+                    imageAltText={imageAltText}
+                    messages={messages}
+                    isTracked={isTracked}
+                    isActive={isActive}
+                    onClick={() => onThumbnailClick(displaySetInstanceUID)}
+                    onDoubleClick={() => onThumbnailDoubleClick(displaySetInstanceUID)}
+                    onClickUntrack={() => onClickUntrack(displaySetInstanceUID)}
+                  />
+                </div>
               );
             case 'thumbnailNoImage':
               return (

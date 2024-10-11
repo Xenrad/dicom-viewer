@@ -41,7 +41,7 @@ const ButtonGroup = ({
       })}
     >
       {!separated && (
-        <div className="flex h-[32px] w-full">
+        <div className="flex items-center p-1 w-full">
           {Children.map(children, (child, index) => {
             if (React.isValidElement(child)) {
               return cloneElement(child, {
@@ -49,7 +49,7 @@ const ButtonGroup = ({
                 className: classnames(
                   'rounded-[4px] px-2 py-1',
                   index === activeIndex
-                    ? 'bg-customblue-40 text-white'
+                    ? 'bg-primary-light text-black'
                     : 'text-primary-active bg-black',
                   child.props.className,
                   child.props.disabled ? 'ohif-disabled' : ''
@@ -71,10 +71,10 @@ const ButtonGroup = ({
               return cloneElement(child, {
                 key: index,
                 className: classnames(
-                  'rounded-[4px] px-2 py-1',
+                  'rounded-md px-2 py-1',
                   index === activeIndex
-                    ? 'bg-customblue-40 text-white'
-                    : 'text-primary-active bg-black border-secondary-light rounded-[5px] border',
+                    ? 'bg-primary-light text-black'
+                    : 'text-primary-active bg-black border-secondary-light rounded border',
                   child.props.className,
                   child.props.disabled ? 'ohif-disabled' : ''
                 ),

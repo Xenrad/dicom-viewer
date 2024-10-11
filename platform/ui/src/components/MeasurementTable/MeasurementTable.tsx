@@ -36,11 +36,11 @@ const MeasurementTable = ({
 
   return (
     <div>
-      <div className="bg-secondary-main flex justify-between px-2 py-1">
-        <span className="text-base font-bold uppercase tracking-widest text-white">{t(title)}</span>
-        <span className="text-base font-bold text-white">{amount}</span>
+      <div className="mt-[2px] flex cursor-pointer select-none items-center justify-between rounded-[4px] pl-4 text-[13px] border-b border-[#323132]">
+        <div className="text-aqua-pale py-3 font-bold uppercase">{t(title)}</div>
+        <span className="text-aqua-pale py-3 pr-4 font-bold uppercase">{amount}</span>
       </div>
-      <div className="ohif-scrollbar max-h-112 overflow-hidden">
+      <div className="ohif-scrollbar max-h-112 flex flex-col gap-2 overflow-hidden p-4">
         {data.length !== 0 &&
           data.map((measurementItem, index) => (
             <CustomMeasurementItem
@@ -57,10 +57,9 @@ const MeasurementTable = ({
             />
           ))}
         {data.length === 0 && (
-          <div className="group flex cursor-default border border-transparent bg-black transition duration-300">
-            <div className="bg-primary-dark text-primary-light group-hover:bg-secondary-main w-6 py-1 text-center text-base transition duration-300"></div>
-            <div className="flex flex-1 items-center justify-between px-2 py-4">
-              <span className="text-primary-light mb-1 flex flex-1 items-center text-base">
+          <div className="group flex cursor-default border border-transparent transition duration-300">
+            <div className="flex flex-1 items-center justify-center rounded border border-[#323132] px-2 py-4">
+              <span className="text-aqua-pale text-sm">
                 {t('No tracked measurements')}
               </span>
             </div>

@@ -52,7 +52,7 @@ const Thumbnail = ({
     <div
       className={classnames(
         className,
-        'group mb-8 flex flex-1 cursor-pointer select-none flex-col px-3 outline-none'
+        'group flex flex-1 cursor-pointer select-none flex-col rounded-lg border border-[#323132] p-2 outline-none'
       )}
       id={`thumbnail-${displaySetInstanceUID}`}
       data-cy={`study-browser-thumbnail`}
@@ -65,10 +65,10 @@ const Thumbnail = ({
       <div ref={drag}>
         <div
           className={classnames(
-            'flex h-32 flex-1 items-center justify-center overflow-hidden rounded-md bg-black text-base text-white',
+            'flex h-20 flex-1 items-center justify-center overflow-hidden rounded-md bg-[#090909] text-base text-white',
             isActive
-              ? 'border-primary-light border-2'
-              : 'border-secondary-light border hover:border-blue-300'
+              ? 'border-primary-light/50 border-2'
+              : 'border border-[#424040] hover:border-blue-300/50'
           )}
         >
           {imageSrc ? (
@@ -82,7 +82,7 @@ const Thumbnail = ({
             <div>{imageAltText}</div>
           )}
         </div>
-        <div className="flex flex-1 flex-row items-center pt-2 text-base text-blue-300">
+        <div className="mt-2 flex flex-1 flex-row items-center rounded-lg border border-[#323132] px-2 py-1 text-base text-blue-300">
           <div className="mr-4">
             <span className="text-primary-main font-bold">{'S: '}</span>
             {seriesNumber}
@@ -94,12 +94,18 @@ const Thumbnail = ({
             />
             {` ${numInstances}`}
           </div>
-          <DisplaySetMessageListTooltip
-            messages={messages}
-            id={`display-set-tooltip-${displaySetInstanceUID}`}
-          />
+          <div className="opacity-55">
+            <DisplaySetMessageListTooltip
+              messages={messages}
+              id={`display-set-tooltip-${displaySetInstanceUID}`}
+            />
+          </div>
         </div>
-        <div className="break-all text-base text-white">{description}</div>
+        {description && (
+          <div className="mt-1 break-all rounded-lg border border-[#323132] px-2 py-1 text-base text-white/70">
+            {description}
+          </div>
+        )}
       </div>
     </div>
   );

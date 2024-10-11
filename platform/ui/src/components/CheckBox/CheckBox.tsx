@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Icon, Typography } from '../../';
+import { CheckSquare, Square } from 'lucide-react';
 
 /**
  * REACT CheckBox component
@@ -31,7 +32,11 @@ const CheckBox: React.FC<{
       className={`flex cursor-pointer items-center space-x-1 ${className ? className : ''}`}
       onClick={handleClick}
     >
-      {isChecked ? <Icon name="checkbox-checked" /> : <Icon name="checkbox-unchecked" />}
+      {isChecked ? (
+        <CheckSquare size={14} className="text-primary-light" />
+      ) : (
+        <Square size={14} className="text-primary-light" />
+      )}
 
       <Typography
         variant={labelVariant ?? 'subtitle'}

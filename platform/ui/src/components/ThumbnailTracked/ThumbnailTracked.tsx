@@ -32,17 +32,18 @@ function ThumbnailTracked({
 
   return (
     <div
-      className={classnames('flex flex-1 cursor-pointer flex-row px-3 outline-none', className)}
+      className={classnames('flex flex-1 cursor-pointer flex-row pr-3 outline-none', className)}
       id={`thumbnail-${displaySetInstanceUID}`}
     >
-      <div className="flex-2 flex flex-col items-center">
+      <div className="flex-2 opacity-55 flex flex-col items-center">
         <div
           className={classnames(
-            'relative mb-2 flex cursor-pointer flex-col items-center justify-start p-2',
+            'relative flex cursor-pointer flex-col items-center justify-start p-2',
             isTracked && 'rounded-sm hover:bg-gray-900'
           )}
         >
           <Tooltip
+            className="h-4"
             position="right"
             content={
               <div className="flex flex-1 flex-row">

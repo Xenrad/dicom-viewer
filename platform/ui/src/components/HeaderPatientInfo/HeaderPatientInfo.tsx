@@ -94,7 +94,7 @@ function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
 
   return (
     <div
-      className="hover:bg-primary-dark flex cursor-pointer items-center justify-center gap-1 rounded-lg"
+      className="hover:bg-primary-dark border-secondary-dark flex cursor-pointer items-center justify-center gap-1 rounded-lg border"
       onClick={handleOnClick}
     >
       <Icon

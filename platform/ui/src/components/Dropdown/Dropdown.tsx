@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import Icon from '../Icon';
 import Typography from '../Typography';
 
-const borderStyle = 'border-b last:border-b-0 border-secondary-main';
+const borderStyle = 'border-b last:border-b-0 border-secondary-dark';
 
 const Dropdown = ({
   id,
@@ -48,7 +48,7 @@ const Dropdown = ({
         <div
           key={title}
           className={classnames(
-            'hover:bg-secondary-main flex cursor-pointer items-center px-4 py-2 transition duration-300 ',
+            'hover:bg-[#1c1c1e] flex cursor-pointer items-center px-4 py-2 transition duration-300 ',
             titleClassName,
             showBorders && borderStyle
           )}
@@ -145,7 +145,7 @@ const Dropdown = ({
     const listElement = (
       <div
         className={classnames(
-          'top-100 border-secondary-main w-max-content absolute mt-2 transform rounded border bg-black shadow transition duration-300',
+          'top-100 bg-[#090909] border-[#323132] border w-max-content absolute mt-2 transform shadow transition duration-300 rounded-lg',
           {
             'right-0 origin-top-right': alignment === 'right',
             'left-0 origin-top-left': alignment === 'left',

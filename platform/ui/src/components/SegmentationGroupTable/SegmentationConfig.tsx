@@ -128,7 +128,7 @@ const SegmentationConfig = ({
   const { initialConfig } = segmentationConfig;
   const [isMinimized, setIsMinimized] = useState(true);
   return (
-    <div className="bg-primary-dark select-none">
+    <div className="border-b border-[#323132] select-none">
       <div>
         <ActiveSegmentationConfig
           config={initialConfig}

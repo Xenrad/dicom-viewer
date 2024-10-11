@@ -72,6 +72,7 @@ import iconStatusAlert from './../../assets/icons/icon-status-alert.svg';
 import iconTransferring from './../../assets/icons/icon-transferring.svg';
 import iconUpload from './../../assets/icons/icon-upload.svg';
 import navigationPanelRightHide from './../../assets/icons/navigation-panel-right-hide.svg';
+import navigationPanelRightRevealWhite from './../../assets/icons/navigation-panel-right-reveal-white.svg';
 import navigationPanelRightReveal from './../../assets/icons/navigation-panel-right-reveal.svg';
 import tabLinear from './../../assets/icons/tab-linear.svg';
 import tabPatientInfo from './../../assets/icons/tab-patient-info.svg';
@@ -344,6 +345,7 @@ const ICONS = {
   'icon-upload': iconUpload,
   'navigation-panel-right-hide': navigationPanelRightHide,
   'navigation-panel-right-reveal': navigationPanelRightReveal,
+  'navigation-panel-right-reveal-white': navigationPanelRightRevealWhite,
   'tab-linear': tabLinear,
   'tab-patient-info': tabPatientInfo,
   'tab-roi-threshold': tabROIThreshold,

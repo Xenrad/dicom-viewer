@@ -12,10 +12,10 @@ const PanelSection = ({ title, children, actionIcons = [], childrenClassName }) 
   return (
     <>
       <div
-        className="bg-secondary-dark mt-[2px] flex h-7 cursor-pointer select-none items-center justify-between rounded-[4px] pl-2.5 text-[13px]"
+        className="flex cursor-pointer select-none items-center justify-between"
         onClick={handleHeaderClick}
       >
-        <div className="text-aqua-pale">{title}</div>
+        <div className="text-aqua-pale p-4 !text-base font-bold uppercase">{title}</div>
         <div className="flex items-center space-x-1">
           {actionIcons.map((icon, index) => (
             <Icon
@@ -37,9 +37,8 @@ const PanelSection = ({ title, children, actionIcons = [], childrenClassName }) 
       </div>
       {areChildrenVisible && (
         <>
-          <div className="h-[2px] bg-black"></div>
           <div
-            className={`bg-primary-dark flex flex-col overflow-hidden rounded-b-[4px] ${childrenClassName}`}
+            className={`flex flex-col overflow-hidden border-t border-[#323132] ${childrenClassName}`}
           >
             {children}
           </div>

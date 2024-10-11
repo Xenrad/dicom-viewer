@@ -1,26 +1,25 @@
 import React from 'react';
 import Icon from '../Icon';
 import { useTranslation } from 'react-i18next';
+import {Plus} from "lucide-react"
 
 function AddSegmentRow({ onClick, onToggleSegmentationVisibility = null, segmentation = null }) {
   const { t } = useTranslation('SegmentationTable');
   return (
-    <div className="flex justify-between bg-black pl-[34px] hover:cursor-pointer">
+    <div className="flex justify-between border-y border-[#323132] px-4 hover:cursor-pointer">
       <div
-        className="group py-[5px] pb-[5px]"
+        className="group w-full py-2"
         onClick={onClick}
       >
-        <div className="text-primary-active group-hover:bg-secondary-dark flex items-center rounded-[4px] pr-2">
-          <div className="grid h-[28px] w-[28px] place-items-center">
-            <Icon name="icon-add" />
-          </div>
-          <span className="text-[13px]">{t('Add segment')}</span>
+        <div className="hover:bg-primary-light/50 border-primary-light/50 w-full flex items-center justify-center gap-2 rounded-md border p-2 py-1 text-[13px] capitalize text-white">
+          <Plus className="h-4 w-4" />
+          <span className="uppercase text-xs py-1">{t('Add segment')}</span>
         </div>
       </div>
       {segmentation && (
         <div className="flex items-center">
           <div
-            className="hover:bg-secondary-dark ml-3 mr-1 grid h-[28px]  w-[28px] cursor-pointer place-items-center rounded-[4px]"
+            className="hover:bg-secondary-dark ml-3 mr-1 grid h-[28px]  w-[28px] cursor-pointer place-items-center rounded-md"
             onClick={() => onToggleSegmentationVisibility(segmentation.id)}
           >
             {segmentation.isVisible ? (

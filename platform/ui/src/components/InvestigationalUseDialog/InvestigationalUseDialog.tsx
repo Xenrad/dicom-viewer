@@ -13,31 +13,6 @@ const InvestigationalUseDialog = ({ dialogConfiguration }) => {
   const { option, days } = dialogConfiguration;
   const [isHidden, setIsHidden] = useState(true);
 
-  useEffect(() => {
-    const dialogLocalState = localStorage.getItem('investigationalUseDialog');
-    const dialogSessionState = sessionStorage.getItem('investigationalUseDialog');
-
-    switch (option) {
-      case showDialogOption.NeverShowDialog:
-        setIsHidden(true);
-        break;
-      case showDialogOption.AlwaysShowDialog:
-        setIsHidden(!!dialogSessionState);
-        break;
-      case showDialogOption.ShowOnceAndConfigure:
-        if (dialogLocalState) {
-          const { expiryDate } = JSON.parse(dialogLocalState);
-          const isExpired = new Date() > new Date(expiryDate);
-          setIsHidden(!isExpired);
-        } else {
-          setIsHidden(false);
-        }
-        break;
-      default:
-        setIsHidden(true);
-    }
-  }, [option, days]);
-
   const handleConfirmAndHide = () => {
     const expiryDate = new Date();
 

@@ -1,14 +1,10 @@
 .customSelect__wrapper .customSelect__control {
-  @apply border-secondary-light w-full rounded border bg-black text-sm leading-tight text-white shadow transition duration-300;
+  @apply hover:bg-primary-light/50 border-primary-light/50 hover:text-white hover:border-primary-light bg-[#1C1C1E] w-full rounded border text-sm leading-tight text-primary-light shadow transition duration-300 cursor-pointer;
   min-height: 28px;
 }
-.customSelect__wrapper .customSelect__control:hover {
-  @apply border-gray-500;
-}
-
 .customSelect__wrapper .customSelect__control:focus,
 .customSelect__wrapper .customSelect__control--menu-is-open {
-  @apply border-gray-500 outline-none;
+  @apply outline-none;
 }
 
 .customSelect--is-disabled .customSelect__control--is-disabled {
@@ -40,7 +36,7 @@
 }
 
 .customSelect__wrapper .customSelect__single-value {
-  @apply text-aqua-pale pl-1;
+  @apply pl-1 text-white;
   max-width: calc(100% - 20px);
   overflow: hidden;
   text-overflow: ellipsis;
@@ -75,22 +71,23 @@
 }
 
 .customSelect__menu-portal .customSelect__menu-list::-webkit-scrollbar-thumb {
-  background-color: #0944b3;
+  background-color: #5acce6;
   border-radius: 10px;
 }
 
 .customSelect__option--is-focused {
-  background-color: #0944b391 !important;
+  background-color: #5acce691 !important;
 }
 
 .customSelect__menu-portal .customSelect__option:hover {
-  background-color: #0944b391;
+  background-color: #5acce691;
 }
 
 .customSelect__menu-portal .customSelect__menu {
-  border: 2px solid #0944b3;
+  @apply min-h-60;
+  border: 2px solid #323132;
   border-radius: 6px;
-  background-color: #151515 !important;
+  background-color: #090909 !important;
 }
 
 .css-1hwfws3 {

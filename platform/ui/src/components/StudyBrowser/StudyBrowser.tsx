@@ -71,44 +71,55 @@ const StudyBrowser = ({
   return (
     <React.Fragment>
       <div
-        className="w-100 border-secondary-light bg-primary-dark flex h-16 flex-row items-center justify-center border-b p-4"
+        className="w-100 min-h-16 flex flex-row items-center justify-center"
         data-cy={'studyBrowser-panel'}
       >
         {/* TODO Revisit design of LegacyButtonGroup later - for now use LegacyButton for its children.*/}
-        <LegacyButtonGroup
-          variant="outlined"
-          color="secondary"
-          splitBorder={false}
-        >
-          {tabs.map(tab => {
-            const { name, label, studies } = tab;
-            const isActive = activeTabName === name;
-            const isDisabled = !studies.length;
-            // Apply the contrasting color for brighter button color visibility
-            const classStudyBrowser = customizationService?.getModeCustomization(
-              'class:StudyBrowser'
-            ) || {
-              true: 'default',
-              false: 'default',
-            };
-            const color = classStudyBrowser[`${isActive}`];
-            return (
-              <LegacyButton
-                key={name}
-                className={'min-w-18 p-2 text-base text-white'}
-                size="initial"
-                color={color}
-                bgColor={isActive ? 'bg-primary-main' : 'bg-black'}
-                onClick={() => {
-                  onClickTab(name);
-                }}
-                disabled={isDisabled}
-              >
-                {t(label)}
-              </LegacyButton>
-            );
-          })}
-        </LegacyButtonGroup>
+        <div className="w-full p-4">
+          <LegacyButtonGroup
+            variant="text"
+            color="secondary"
+            splitBorder={false}
+            fullWidth={true}
+            rounded="none"
+            className={'gap-2'}
+          >
+            {tabs.map(tab => {
+              const { name, label, studies } = tab;
+              const isActive = activeTabName === name;
+              const isDisabled = !studies.length;
+              // Apply the contrasting color for brighter button color visibility
+              const classStudyBrowser = customizationService?.getModeCustomization(
+                'class:StudyBrowser'
+              ) || {
+                true: 'default',
+                false: 'default',
+              };
+              return (
+                <LegacyButton
+                  key={name}
+                  variant="text"
+                  className={'min-w-18 rounded-lg p-2 uppercase text-xs'}
+                  border="none"
+                  size="initial"
+                  color="white"
+                  bgColor={
+                    isActive
+                      ? 'bg-primary-light hover:bg-primary-light/80 text-black'
+                      : 'text-white'
+                  }
+                  onClick={() => {
+                    onClickTab(name);
+                  }}
+                  rounded="medium"
+                  disabled={isDisabled}
+                >
+                  {t(label)}
+                </LegacyButton>
+              );
+            })}
+          </LegacyButtonGroup>
+        </div>
       </div>
       <div className="ohif-scrollbar invisible-scrollbar flex flex-1 flex-col overflow-auto">
         {getTabContent()}

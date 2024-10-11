@@ -28,12 +28,10 @@ const SegmentItem = ({
 
   return (
     <div
-      className={classnames(
-        'text-aqua-pale group/row bg-primary-dark flex min-h-[28px] flex-col overflow-hidden',
-        {
-          'bg-primary-light border-primary-light rounded-l-[6px] border text-black': isActive,
-        }
-      )}
+      className={classnames('group/row min-h-16 flex flex-col overflow-hidden text-white/70', {
+        'border-primary-light/50 rounded-md border text-black': isActive,
+        'border border-[#323132]': !isActive,
+      })}
       onClick={e => {
         e.stopPropagation();
         onClick(segmentationId, segmentIndex);
@@ -41,11 +39,11 @@ const SegmentItem = ({
       tabIndex={0}
       data-cy={'segment-item'}
     >
-      <div className="flex min-h-[28px]">
+      <div className="min-h-16 flex">
         <div
-          className={classnames('group/number grid w-[28px] place-items-center', {
+          className={classnames('group/number grid place-items-center', {
             'bg-primary-light border-primary-light rounded-l-[4px] border text-black': isActive,
-            'bg-primary-dark border-primary-dark border': !isActive,
+            'border border-[#323132] bg-[#323132]': !isActive,
           })}
           onMouseEnter={() => setIsNumberBoxHovering(true)}
           onMouseLeave={() => setIsNumberBoxHovering(false)}
@@ -53,7 +51,7 @@ const SegmentItem = ({
           {isNumberBoxHovering && showDelete ? (
             <Icon
               name="close"
-              className={classnames('h-[8px] w-[8px]', {
+              className={classnames('h-4 w-4', {
                 'hover:cursor-pointer hover:opacity-60': !disableEditing,
               })}
               onClick={e => {
@@ -65,18 +63,21 @@ const SegmentItem = ({
               }}
             />
           ) : (
-            <div>{segmentIndex}</div>
+            <div
+              className={classnames('w-4 text-center', {
+                rounded: !isActive,
+              })}
+            >
+              {segmentIndex}
+            </div>
           )}
         </div>
         <div
           className={classnames('text-aqua-pale relative flex w-full', {
             'border border-l-0 border-transparent': !isActive,
           })}
-          style={{
-            width: 'calc(100% - 28px)',
-          }}
         >
-          <div className="bg-primary-dark flex h-full flex-grow items-center">
+          <div className="flex h-full flex-grow items-center">
             <div className="pl-2 pr-1.5">
               <div
                 className={classnames('h-[8px] w-[8px] grow-0 rounded-full', {
@@ -96,7 +97,7 @@ const SegmentItem = ({
           </div>
           <div
             className={classnames(
-              'absolute right-[8px] top-0 flex flex-row-reverse rounded-lg pt-[3px]',
+              'absolute right-[8px] top-0 flex flex-row-reverse rounded-lg pt-[3px] ',
               {}
             )}
           >

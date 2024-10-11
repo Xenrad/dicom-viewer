@@ -2,6 +2,7 @@ import React from 'react';
 import { Select, Icon, Dropdown, Tooltip } from '../../components';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
+import { CircleEllipsis, Eye, EyeOff, Info, ChevronDown, Divide } from 'lucide-react';
 
 function SegmentationDropDownRow({
   segmentations = [],
@@ -32,8 +33,27 @@ function SegmentationDropDownRow({
   }
 
   return (
-    <div className="group mx-0.5 mt-[8px] flex items-center pb-[10px]">
-      <div
+    <div className="group flex flex-col gap-y-2 border-b border-[#323132] py-2 px-4 gap-1">
+      {selectOptions?.length && (
+        <Select
+          id="segmentation-select"
+          isClearable={false}
+          onChange={handleChange}
+          components={{
+            DropdownIndicator: () => (
+              <div className="pr-2">
+                <ChevronDown size={16} className="text-white/70" />
+              </div>
+            ),
+          }}
+          isSearchable={false}
+          options={selectOptions}
+          value={selectOptions?.find(o => o.value === activeSegmentation.id)}
+          className="h-9 text-xs uppercase"
+        />
+      )}
+      <div className="flex items-center gap-2 justify-between">
+     <div
         onClick={e => {
           e.stopPropagation();
         }}
@@ -42,7 +62,7 @@ function SegmentationDropDownRow({
           id="segmentation-dropdown"
           showDropdownIcon={false}
           alignment="left"
-          itemsClassName={`text-primary-active ${addSegmentationClassName}`}
+          itemsClassName={`text-white/70 ${addSegmentationClassName}`}
           showBorders={false}
           maxCharactersPerLine={30}
           list={[
@@ -98,60 +118,34 @@ function SegmentationDropDownRow({
             ],
           ]}
         >
-          <div className="hover:bg-secondary-dark  grid h-[28px] w-[28px]  cursor-pointer place-items-center rounded-[4px]">
-            <Icon name="icon-more-menu"></Icon>
+          <div className="h-7 w-7 cursor-pointer rounded-md grid place-items-center hover:bg-primary-light/50 border border-[#323132] hover:border-primary-light hover:border-transparent text-white/70 hover:text-black transition-all">
+            <CircleEllipsis size={20}/>
           </div>
         </Dropdown>
       </div>
-      {selectOptions?.length && (
-        <Select
-          id="segmentation-select"
-          isClearable={false}
-          onChange={handleChange}
-          components={{
-            DropdownIndicator: () => (
-              <Icon
-                name={'chevron-down-new'}
-                className="mr-2"
-              />
-            ),
-          }}
-          isSearchable={false}
-          options={selectOptions}
-          value={selectOptions?.find(o => o.value === activeSegmentation.id)}
-          className="text-aqua-pale h-[26px] w-1/2 text-[13px]"
-        />
-      )}
-      <div className="flex items-center">
+        <div className="flex gap-2">
         <Tooltip
+          className='w-7 h-7 rounded-md hover:bg-primary-light/50 border border-[#323132] hover:border-primary-light hover:border-transparent grid place-items-center hover:text-black transition-all text-white/70 cursor-pointer'
           position="bottom-right"
           content={
             <div className="flex flex-col">
-              <div className="text-[13px] text-white">Series:</div>
-              <div className="text-aqua-pale text-[13px]">{activeSegmentation.description}</div>
+              <div className="text-sm text-white/70">Series:</div>
+              <div className="text-aqua-pale text-sm">{activeSegmentation.description}</div>
             </div>
           }
         >
-          <Icon
-            name="info-action"
-            className="text-primary-active"
-          />
+          <Info size={20}/>
         </Tooltip>
         <div
-          className="hover:bg-secondary-dark  mr-1 grid h-[28px]  w-[28px] cursor-pointer place-items-center rounded-[4px]"
+          className="w-7 h-7 rounded-md hover:bg-primary-light/50 border border-[#323132] hover:border-primary-light hover:border-transparent grid place-items-center hover:text-black transition-all text-white/70 cursor-pointer"
           onClick={() => onToggleSegmentationVisibility(activeSegmentation.id)}
         >
           {activeSegmentation.isVisible ? (
-            <Icon
-              name="row-shown"
-              className="text-primary-active"
-            />
+            <Eye size={20}/>
           ) : (
-            <Icon
-              name="row-hidden"
-              className="text-primary-active"
-            />
+            <EyeOff size={20}/>
           )}
+        </div>
         </div>
       </div>
     </div>

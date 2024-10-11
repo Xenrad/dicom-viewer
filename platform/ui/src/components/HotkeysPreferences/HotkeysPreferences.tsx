@@ -50,7 +50,7 @@ const HotkeysPreferences = ({
 
   return (
     <div className="flex flex-row justify-center">
-      <div className="flex w-full flex-row justify-evenly">
+      <div className="flex w-full flex-row justify-between">
         {splitedHotkeys.map((hotkeys, index) => {
           return (
             <div
@@ -69,13 +69,13 @@ const HotkeysPreferences = ({
                   return (
                     <div
                       key={`HotkeyItem@${hotkeyIndex}`}
-                      className="mb-2 flex flex-row justify-end"
+                      className="mb-2 flex flex-row justify-start"
                     >
                       <div className="flex flex-col items-center">
                         <Typography
                           variant="subtitle"
                           className={classNames(
-                            'text-primary-light w-full pr-6 text-right',
+                            'text-primary-light w-56 pr-6 text-left',
                             !isFirst && 'hidden'
                           )}
                         >
@@ -84,7 +84,7 @@ const HotkeysPreferences = ({
                         <Typography
                           variant="subtitle"
                           className={classNames(
-                            'flex h-full flex-row items-center whitespace-nowrap pr-6',
+                            'flex h-full w-56 flex-row items-center whitespace-nowrap pr-6',
                             isFirst && 'mt-5'
                           )}
                         >
@@ -95,7 +95,7 @@ const HotkeysPreferences = ({
                         <Typography
                           variant="subtitle"
                           className={classNames(
-                            'text-primary-light pr-6 pl-0 text-left',
+                            'text-primary-light w-56 pr-6 pl-0  text-left',
                             !isFirst && 'hidden'
                           )}
                         >

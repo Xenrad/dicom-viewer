@@ -33,7 +33,7 @@ const Modal = ({
 
   const renderHeader = () =>
     title && (
-      <header className="bg-primary-dark drag-handle flex items-center rounded-tl rounded-tr px-[20px] py-[13px]">
+      <header className="border-secondary-light/50 drag-handle flex items-center rounded-tl-lg rounded-tr-lg border-2 border-b-0 bg-black px-[20px] py-[13px]">
         <Typography
           variant="h6"
           color="primaryLight"
@@ -58,8 +58,8 @@ const Modal = ({
       <section
         className={
           contentDimensions
-            ? `ohif-scrollbar bg-primary-dark overflow-y-auto ${contentDimensions}`
-            : 'ohif-scrollbar modal-content bg-primary-dark overflow-y-auto rounded-bl rounded-br px-[20px] pt-2 pb-[20px]'
+            ? `ohif-scrollbar border-secondary-light/50 overflow-y-auto border-2 border-t-0 bg-black ${contentDimensions}`
+            : 'ohif-scrollbar modal-content border-secondary-light/50 overflow-y-auto rounded-bl-lg rounded-br-lg border-2 border-t-0 bg-black px-[20px] pt-2 pb-[20px]'
         }
       >
         {children}

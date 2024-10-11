@@ -22,9 +22,9 @@ const Dialog = ({
 }) => {
   const [value, setValue] = useState(defaultValue);
 
-  const theme = 'bg-primary-dark';
+  const theme = 'bg-black';
   const flex = 'flex flex-col';
-  const border = 'border-0 rounded';
+  const border = 'border-2 border-secondary-light/50 rounded-lg';
   const outline = 'outline-none focus:outline-none';
   const position = 'relative';
   const width = 'w-full';

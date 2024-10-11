@@ -29,27 +29,27 @@ const variants = {
     default:
       'text-primary-light hover:bg-primary-light hover:text-white active:opacity-80 focus:bg-primary-light focus:text-white',
     primary:
-      'text-primary-main hover:bg-primary-main hover:text-white active:opacity-80 focus:bg-primary-main focus:text-white',
+      'text-primary-light hover:bg-primary-light hover:text-white active:opacity-80 focus:bg-primary-light focus:text-white',
     secondary:
       'text-secondary-light hover:bg-secondary-light hover:text-white active:opacity-80 focus:bg-secondary-light focus:text-white',
     white:
-      'text-white hover:bg-white hover:text-black active:opacity-80 focus:bg-white focus:text-black',
+      'text-white hover:bg-white/60 hover:text-black active:opacity-80 focus:bg-white focus:text-black',
     black:
       'text-black hover:bg-black hover:text-white focus:bg-black focus:text-white active:opacity-80',
   },
   outlined: {
     default:
       'text-primary-light hover:bg-primary-light hover:text-black focus:text-black focus:bg-primary-light active:opacity-80',
-    primary: 'text-primary-main hover:opacity-80 active:opacity-100 focus:opacity-80',
+    primary: 'text-primary-light hover:opacity-80 active:opacity-100 focus:opacity-80',
     secondary: 'text-secondary-light hover:opacity-80 active:opacity-100 focus:opacity-80',
     translucent: 'text-white hover:opacity-80 active:opacity-100 focus:opacity-80',
     white:
-      'text-black hover:bg-primary-main focus:bg-primary-main hover:border-black focus:border-black',
+      'text-black hover:bg-primary-light focus:bg-primary-light hover:border-black focus:border-black',
     black:
-      'text-white hover:bg-primary-main focus:bg-primary-main hover:border-black focus:border-black',
+      'text-white hover:bg-primary-light focus:bg-primary-light hover:border-black focus:border-black',
     primaryActive: 'text-primary-active hover:opacity-80 active:opacity-100 focus:opacity-80',
     primaryLight:
-      'border bg-transparent border-primary-main text-white hover:opacity-80 active:opacity-100 focus:opacity-80',
+      'border bg-transparent border-primary-light text-white hover:opacity-80 active:opacity-100 focus:opacity-80',
   },
   contained: {
     default: 'text-black hover:opacity-80 active:opacity-100 focus:opacity-80',
@@ -87,7 +87,7 @@ const defaultVariantBackGroundColor = {
   },
   contained: {
     default: 'bg-primary-light',
-    primary: 'bg-primary-main',
+    primary: 'bg-primary-light',
     primaryDark: 'bg-primary-dark',
     secondary: 'bg-secondary-light',
     white: 'bg-white',
@@ -96,7 +96,7 @@ const defaultVariantBackGroundColor = {
   },
   disabled: {
     default: 'bg-primary-light',
-    primary: 'bg-primary-main',
+    primary: 'bg-primary-light',
     secondary: 'bg-secondary-light',
     white: 'bg-white',
     black: 'bg-black',
@@ -117,7 +117,7 @@ const _getVariantClass = (variant, color, bgColor = null) => {
 const borderClasses = {
   none: '',
   light: 'border border-primary-light',
-  primary: 'border border-primary-main',
+  primary: 'border border-primary-light',
   primaryActive: 'border border-primary-active',
   secondary: 'border border-secondary-light',
   white: 'border border-white',

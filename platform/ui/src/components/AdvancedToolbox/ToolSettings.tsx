@@ -68,6 +68,7 @@ const renderRadioSetting = option => {
   const renderButtons = option => {
     return option.values?.map(({ label, value: optionValue }, index) => (
       <button
+        className="rounded-md text-white/70"
         onClick={() => {
           option.commands?.(optionValue);
         }}
@@ -86,7 +87,7 @@ const renderRadioSetting = option => {
       <span>{option.name}</span>
       <div className="max-w-1/2">
         <ButtonGroup
-          className="border-secondary-light rounded-md border"
+          className="border-primary-light/70 rounded-md border"
           activeIndex={option.values.findIndex(({ value }) => value === option.value) || 0}
         >
           {renderButtons(option)}
