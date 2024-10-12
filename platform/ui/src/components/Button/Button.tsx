@@ -32,7 +32,7 @@ const enabledEffectClasses = {
   ),
 };
 
-const baseEnabledClasses = 'text-white';
+const baseEnabledClasses = 'text-black';
 
 const enabledClasses = {
   [ButtonEnums.type.primary]: classnames(
@@ -41,7 +41,7 @@ const enabledClasses = {
     enabledEffectClasses[ButtonEnums.type.primary]
   ),
   [ButtonEnums.type.secondary]: classnames(
-    'bg-customblue-30',
+    'bg-primary-light',
     baseEnabledClasses,
     enabledEffectClasses[ButtonEnums.type.secondary]
   ),

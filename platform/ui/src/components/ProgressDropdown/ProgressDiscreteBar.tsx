@@ -11,8 +11,8 @@ const ProgressDiscreteBar = ({ options }: { options: ProgressDropdownOption[] })
           key={i}
           className={classnames('mr-1 h-1 grow first:rounded-l-sm last:mr-0 last:rounded-r-sm', {
             'bg-black': !option.activated && !option.completed,
-            'bg-primary-main': option.activated && !option.completed,
-            'bg-primary-light': option.completed,
+            'bg-primary-main text-black': option.activated && !option.completed,
+            'bg-primary-light text-black': option.completed,
           })}
         />
       ))}

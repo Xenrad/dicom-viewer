@@ -99,7 +99,7 @@ const ProgressDropdown = ({
       <div>
         <div className="mb-1.5 flex h-[26px]">
           <div
-            className="bg-secondary-dark border-primary-main flex grow cursor-pointer rounded border"
+            className="bg-[#090909] border-[#323132] flex grow cursor-pointer rounded border"
             style={{ width: `${dropDownWidth}px` }}
             onClick={toggleOpen}
           >
@@ -110,20 +110,20 @@ const ProgressDropdown = ({
             </div>
             <Icon
               name="chevron-down"
-              className="text-primary-active mt-0.5 ml-1"
+              className="text-primary-light mt-0.5 ml-1"
             />
           </div>
           <button
             className={classnames('ml-1.5 w-[26px] rounded text-base', {
               'bg-primary-main': canMoveNext,
-              'bg-primary-dark pointer-events-none': !canMoveNext,
+              'bg-[#090909] pointer-events-none': !canMoveNext,
             })}
           >
             <Icon
               name="arrow-right"
-              className={classnames('relative left-0.5 h-6 w-6 text-white', {
-                'text-white': canMoveNext,
-                'text-secondary-light': !canMoveNext,
+              className={classnames('relative left-0.5 h-6 w-6', {
+                'text-black': canMoveNext,
+                'text-primary-light': !canMoveNext,
               })}
               onClick={handleNextButtonClick}
             />
@@ -132,8 +132,8 @@ const ProgressDropdown = ({
         <div
           className={classnames(
             'absolute top-7 left-0 right-8 z-10 mt-0.5 origin-top',
-            'bg-primary-dark overflow-hidden transition-[max-height] duration-300 ',
-            'border-secondary-main rounded border shadow',
+            'bg-[#090909] overflow-hidden transition-[max-height] duration-300 ',
+            'border-[#323132] rounded border shadow',
             {
               hidden: !open,
               'max-h-[500px]': open,

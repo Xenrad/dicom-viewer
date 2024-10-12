@@ -16,7 +16,7 @@ const PanelSection = ({ title, children, actionIcons = [], childrenClassName }) 
         onClick={handleHeaderClick}
       >
         <div className="text-white p-4 !text-base font-bold uppercase">{title}</div>
-        <div className="flex items-center space-x-1">
+        <div className="flex items-center space-x-1 text-common-bright">
           {actionIcons.map((icon, index) => (
             <Icon
               key={index}
@@ -30,7 +30,7 @@ const PanelSection = ({ title, children, actionIcons = [], childrenClassName }) 
               }}
             />
           ))}
-          <div className="grid h-[28px] w-[28px] place-items-center">
+          <div className="grid h-[28px] w-[28px] place-items-center text-common-bright">
             <Icon name={areChildrenVisible ? 'chevron-down-new' : 'chevron-left-new'} />
           </div>
         </div>

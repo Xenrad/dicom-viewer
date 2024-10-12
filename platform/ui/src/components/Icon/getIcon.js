@@ -361,7 +361,7 @@ const ICONS = {
   'tool-referenceLines': referenceLines,
   'chevron-left-new': chevronLeftNew,
   'chevron-down-new': chevronDownNew,
-  // 'settings-bars': settingsBars,
+  'settings-bars': Settings2,
   'icon-rename': iconRename,
   'icon-add': iconAdd,
   'icon-delete': iconDelete,
@@ -391,7 +391,7 @@ const ICONS = {
   /** New Patient Info Toolbar */
   'icon-chevron-patient': iconChevronPatient,
   'icon-patient': iconPatient,
-  'icon-settings': Settings2,
+  'icon-settings': iconSettings,
   'icon-toolbar-back': iconToolbarBack,
   'icon-multiple-patients': iconMultiplePatients,
   /** Volume Rendering */

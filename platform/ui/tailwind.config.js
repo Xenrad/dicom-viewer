@@ -32,8 +32,8 @@ module.exports = {
         // light: '#C2F0D7',
         light: '#C2F0D7',
         main: '#C2F0D7',
-        dark: '#090c29',
-        active: '#348cfd',
+        dark: '#090909',
+        active: '#C2F0D7',
       },
 
       inputfield: {
@@ -46,7 +46,7 @@ module.exports = {
       secondary: {
         light: '#3a3f99',
         main: '#2b166b',
-        dark: '#041c4a',
+        dark: '#090909',
         active: '#1f1f27',
       },
 
@@ -64,16 +64,16 @@ module.exports = {
       },
 
       customblue: {
-        10: '#0A163F',
-        20: '#0B1F54',
-        30: '#09286e',
-        40: '#0E307F',
-        50: '#0F3A94',
-        80: '#1454D4',
-        100: '#c4fdff',
-        200: '#38daff',
-        300: '#1D204D',
-        400: '#90A0C1',
+        10: '#C2F0D7',
+        20: '#C2F0D7',
+        30: '#C2F0D7',
+        40: '#C2F0D7',
+        50: '#C2F0D7',
+        80: '#C2F0D7',
+        100: '#C2F0D7',
+        200: '#C2F0D7',
+        300: '#C2F0D7',
+        400: '#C2F0D7',
       },
 
       customgray: {
