@@ -94,17 +94,17 @@ function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
 
   return (
     <div
-      className="hover:bg-primary-dark border-secondary-dark flex cursor-pointer items-center justify-center gap-1 rounded-lg border"
+      className="hover:bg-[#1c1c1e] border-[#323132] flex cursor-pointer items-center justify-center gap-1 rounded-lg border pl-3"
       onClick={handleOnClick}
     >
       <Icon
         name={isMixedPatients ? 'icon-multiple-patients' : 'icon-patient'}
-        className="text-primary-active"
+        className="text-primary-light"
       />
       <div className="flex flex-col justify-center">
         {expanded ? (
-          <>
-            <div className="self-start text-[13px] font-bold text-white">
+          <div className="flex flex-col justify-center py-1">
+            <div className="self-start text-sm font-bold text-white">
               {formattedPatientName}
             </div>
             <div className="text-aqua-pale flex gap-2 text-[11px]">
@@ -112,17 +112,17 @@ function HeaderPatientInfo({ servicesManager, appConfig }: withAppTypes) {
               <div>{patientInfo.PatientSex}</div>
               <div>{patientInfo.PatientDOB}</div>
             </div>
-          </>
+          </div>
         ) : (
-          <div className="text-primary-active self-center text-[13px]">
+          <div className="text-primary-light self-center text-sm py-2.5">
             {' '}
-            {isMixedPatients ? 'Multiple Patients' : 'Patient'}
+            {isMixedPatients ? 'Multiple Patients' : 'Patient Information'}
           </div>
         )}
       </div>
       <Icon
         name="icon-chevron-patient"
-        className={`text-primary-active ${expanded ? 'rotate-180' : ''}`}
+        className={`text-primary-light ${expanded ? 'rotate-180' : ''}`}
       />
     </div>
   );

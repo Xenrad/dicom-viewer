@@ -33,7 +33,7 @@ const Modal = ({
 
   const renderHeader = () =>
     title && (
-      <header className="border-secondary-light/50 drag-handle flex items-center rounded-tl-lg rounded-tr-lg border-2 border-b-0 bg-black px-[20px] py-[13px]">
+      <header className="border-[#323132] drag-handle flex items-center rounded-tl-lg rounded-tr-lg border-2 border-b-0 bg-[#090909] px-[20px] py-[13px]">
         <Typography
           variant="h6"
           color="primaryLight"
@@ -46,7 +46,7 @@ const Modal = ({
           <Icon
             onClick={onClose}
             name="close"
-            className="text-primary-active cursor-pointer"
+            className="text-primary-light cursor-pointer"
           />
         )}
       </header>
@@ -58,8 +58,8 @@ const Modal = ({
       <section
         className={
           contentDimensions
-            ? `ohif-scrollbar border-secondary-light/50 overflow-y-auto border-2 border-t-0 bg-black ${contentDimensions}`
-            : 'ohif-scrollbar modal-content border-secondary-light/50 overflow-y-auto rounded-bl-lg rounded-br-lg border-2 border-t-0 bg-black px-[20px] pt-2 pb-[20px]'
+            ? `ohif-scrollbar border-[#323132] overflow-y-auto border-2 border-t-0 bg-[#090909] ${contentDimensions}`
+            : 'ohif-scrollbar modal-content border-[#323132] overflow-y-auto rounded-bl-lg rounded-br-lg border-2 border-t-0 bg-[#090909] px-[20px] pt-2 pb-[20px]'
         }
       >
         {children}

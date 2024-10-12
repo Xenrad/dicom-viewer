@@ -223,6 +223,7 @@ import tab4D from './../../assets/icons/tab-4d.svg';
 
 /** New investigational use */
 import investigationalUse from './../../assets/icons/illustration-investigational-use.svg';
+import { Settings2 } from 'lucide-react';
 
 const ICONS = {
   'arrow-down': arrowDown,
@@ -360,7 +361,7 @@ const ICONS = {
   'tool-referenceLines': referenceLines,
   'chevron-left-new': chevronLeftNew,
   'chevron-down-new': chevronDownNew,
-  'settings-bars': settingsBars,
+  // 'settings-bars': settingsBars,
   'icon-rename': iconRename,
   'icon-add': iconAdd,
   'icon-delete': iconDelete,
@@ -390,7 +391,7 @@ const ICONS = {
   /** New Patient Info Toolbar */
   'icon-chevron-patient': iconChevronPatient,
   'icon-patient': iconPatient,
-  'icon-settings': iconSettings,
+  'icon-settings': Settings2,
   'icon-toolbar-back': iconToolbarBack,
   'icon-multiple-patients': iconMultiplePatients,
   /** Volume Rendering */

@@ -14,7 +14,7 @@ const baseClasses = {
   Secondary:
     'h-full flex items-center justify-center rounded-tr-md rounded-br-md w-4 border-2 border-transparent group/secondary',
   SecondaryIcon: 'w-4 h-full stroke-1',
-  Separator: 'border-l py-3 ml-0.5',
+  Separator: 'py-3',
   Content: 'absolute z-10 top-0 mt-12',
 };
 
@@ -22,7 +22,7 @@ const classes = {
   Button: ({ isExpanded }) =>
     classNames(
       baseClasses.Button,
-      !isExpanded && 'hover:!bg-primary-dark hover:border-primary-dark'
+      isExpanded ? 'bg-primary-light' : 'hover:!bg-[#090909] hover:border-[#090909]'
     ),
   Interface: 'h-full flex flex-row items-center',
   Primary: ({ isExpanded, isActive }) =>
@@ -30,30 +30,29 @@ const classes = {
       baseClasses.Primary,
       isActive
         ? isExpanded
-          ? 'border-primary-dark !bg-primary-dark hover:border-primary-dark !text-primary-light'
-          : 'border-primary-light bg-primary-light rounded-md'
-        : `focus:!text-black focus:!rounded-md focus:!border-primary-light focus:!bg-primary-light ${isExpanded ? 'border-primary-dark bg-primary-dark !text-primary-light' : 'border-secondary-dark bg-secondary-dark group-hover/button:border-primary-dark group-hover/button:text-primary-light hover:!bg-primary-dark hover:border-primary-dark focus:!text-black'}`
+          ? 'border-primary-light !bg-primary-light hover:border-primary-light !text-black'
+          : 'border-primary-light bg-primary-light rounded-md !text-black'
+        : `focus:!text-black focus:!rounded-md focus:!border-primary-light focus:!bg-primary-light
+        ${isExpanded ? 'border-primary-light border rounded-r-0 !text-black' : 'border-[#1c1c1e] bg-[#1c1c1e] group-hover/button:border-primary-light group-hover/button:!text-black group-hover/button:!bg-primary-light hover:!text-black hover:border-primary-light focus:!text-black'}`
     ),
   Secondary: ({ isExpanded, primary }) =>
     classNames(
       baseClasses.Secondary,
       isExpanded
-        ? 'bg-primary-light !rounded-tr-md !rounded-br-md'
+        ? 'cursor-pointer bg-primary-light !rounded-tr-md !rounded-br-md'
         : primary.isActive
-          ? 'bg-secondary-dark'
-          : 'hover:bg-primary-dark bg-secondary-dark group-hover/button:border-primary-dark'
+          ? 'cursor-pointer'
+          : 'cursor-pointer hover:bg-[#090909]'
     ),
   SecondaryIcon: ({ isExpanded }) =>
     classNames(
       baseClasses.SecondaryIcon,
-      isExpanded
-        ? 'text-primary-dark'
-        : 'text-primary-active group-hover/secondary:text-primary-light'
+      isExpanded ? 'text-black' : 'text-common-bright'
     ),
   Separator: ({ primary, isExpanded, isHovering }) =>
     classNames(
       baseClasses.Separator,
-      isHovering || isExpanded || primary.isActive ? 'border-transparent' : 'border-primary-active'
+      isHovering || isExpanded || primary.isActive ? 'border-transparent' : 'border-transparent'
     ),
   Content: ({ isExpanded }) => classNames(baseClasses.Content, isExpanded ? 'block' : 'hidden'),
 };
@@ -66,7 +65,7 @@ const DefaultListItemRenderer = props => {
         'flex h-8 w-full select-none flex-row items-center p-3',
         'whitespace-pre text-base',
         className,
-        `${isActive ? 'hover:opacity-80' : 'hover:bg-primary-dark '}`
+        `${isActive ? 'hover:opacity-80' : 'hover:bg-[#090909]' }`
       )}
     >
       {icon && (

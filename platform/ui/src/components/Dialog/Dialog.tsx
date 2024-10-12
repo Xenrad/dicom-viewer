@@ -22,9 +22,9 @@ const Dialog = ({
 }) => {
   const [value, setValue] = useState(defaultValue);
 
-  const theme = 'bg-black';
+  const theme = 'bg-[#090909]';
   const flex = 'flex flex-col';
-  const border = 'border-2 border-secondary-light/50 rounded-lg';
+  const border = 'border-2 border-[#323132] rounded-lg';
   const outline = 'outline-none focus:outline-none';
   const position = 'relative';
   const width = 'w-full';
@@ -38,6 +38,7 @@ const Dialog = ({
 
   return (
     <div className={classNames(theme, flex, border, outline, position, width, padding)}>
+      <div className='uppercase'>
       <HeaderComponent
         title={title}
         noCloseButton={noCloseButton}
@@ -45,6 +46,7 @@ const Dialog = ({
         value={value}
         setValue={setValue}
       />
+      </div>
       <BodyComponent
         text={text}
         value={value}

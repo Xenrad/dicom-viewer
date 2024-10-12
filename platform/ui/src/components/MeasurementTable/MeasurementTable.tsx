@@ -37,8 +37,8 @@ const MeasurementTable = ({
   return (
     <div>
       <div className="mt-[2px] flex cursor-pointer select-none items-center justify-between rounded-[4px] pl-4 text-[13px] border-b border-[#323132]">
-        <div className="text-aqua-pale py-3 font-bold uppercase">{t(title)}</div>
-        <span className="text-aqua-pale py-3 pr-4 font-bold uppercase">{amount}</span>
+        <div className="text-white py-3 font-bold uppercase">{t(title)}</div>
+        <span className="text-white py-3 pr-4 font-bold uppercase">{amount}</span>
       </div>
       <div className="ohif-scrollbar max-h-112 flex flex-col gap-2 overflow-hidden p-4">
         {data.length !== 0 &&
@@ -59,7 +59,7 @@ const MeasurementTable = ({
         {data.length === 0 && (
           <div className="group flex cursor-default border border-transparent transition duration-300">
             <div className="flex flex-1 items-center justify-center rounded border border-[#323132] px-2 py-4">
-              <span className="text-aqua-pale text-sm">
+              <span className="text-white/70 text-sm">
                 {t('No tracked measurements')}
               </span>
             </div>

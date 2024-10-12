@@ -15,7 +15,7 @@ const PanelSection = ({ title, children, actionIcons = [], childrenClassName }) 
         className="flex cursor-pointer select-none items-center justify-between"
         onClick={handleHeaderClick}
       >
-        <div className="text-aqua-pale p-4 !text-base font-bold uppercase">{title}</div>
+        <div className="text-white p-4 !text-base font-bold uppercase">{title}</div>
         <div className="flex items-center space-x-1">
           {actionIcons.map((icon, index) => (
             <Icon

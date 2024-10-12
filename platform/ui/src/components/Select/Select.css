@@ -71,20 +71,20 @@
 }
 
 .customSelect__menu-portal .customSelect__menu-list::-webkit-scrollbar-thumb {
-  background-color: #5acce6;
+  background-color: #C2F0D7;
   border-radius: 10px;
 }
 
 .customSelect__option--is-focused {
-  background-color: #5acce691 !important;
+  background-color: #C2F0D791 !important;
 }
 
 .customSelect__menu-portal .customSelect__option:hover {
-  background-color: #5acce691;
+  background-color: #C2F0D791;
 }
 
 .customSelect__menu-portal .customSelect__menu {
-  @apply min-h-60;
+  @apply min-h-20;
   border: 2px solid #323132;
   border-radius: 6px;
   background-color: #090909 !important;

@@ -25,7 +25,7 @@ const classes = {
   Button: ({ isExpanded, primary }) =>
     classNames(
       baseClasses.Button,
-      !isExpanded && !primary.isActive && 'hover:!bg-primary-dark hover:border-primary-dark'
+      !isExpanded && !primary.isActive && 'hover:border-primary-dark'
     ),
   Interface: 'h-full flex flex-row items-center',
   Primary: ({ isActive, isExpanded }) =>
@@ -39,7 +39,7 @@ const classes = {
         ${
           isExpanded
             ? 'border-primary-dark bg-primary-dark !text-primary-light'
-            : 'border-secondary-dark bg-secondary-dark group-hover/button:border-primary-dark group-hover/button:text-primary-light hover:!bg-primary-dark hover:border-primary-dark focus:!text-black'
+            : 'border-secondary-dark bg-secondary-dark group-hover/button:border-primary-dark group-hover/button:text-primary-light hover:border-primary-dark focus:!text-black'
         }
         `
     ),

@@ -25,12 +25,13 @@ module.exports = {
       inherit: 'inherit',
 
       aqua: {
-        pale: '#7bb2ce',
+        pale: '#C2F0D7',
       },
 
       primary: {
-        light: '#5acce6',
-        main: '#0944b3',
+        // light: '#C2F0D7',
+        light: '#C2F0D7',
+        main: '#C2F0D7',
         dark: '#090c29',
         active: '#348cfd',
       },
@@ -38,7 +39,7 @@ module.exports = {
       inputfield: {
         main: '#3a3f99',
         disabled: '#2b166b',
-        focus: '#5acce6',
+        focus: '#C2F0D7',
         placeholder: '#39383f',
       },
 
@@ -148,7 +149,7 @@ module.exports = {
       blue: {
         100: '#ebf8ff',
         200: '#bee3f8',
-        300: '#90cdf4',
+        300: '#C2F0D7',
         400: '#63b3ed',
         500: '#4299e1',
         600: '#3182ce',
