@@ -156,9 +156,9 @@ const DicomTagBrowser = ({ displaySets, displaySetInstanceUID }) => {
         </div>
       </div>
       <div className="h-1 w-full bg-black"></div>
-      <div className="my-3 flex w-1/2 flex-row">
+      <div className="my-3 flex flex-row">
         <InputFilterText
-          className="mr-8 block w-full"
+          className="block w-full"
           placeholder="Search metadata..."
           onDebounceChange={setFilterValue}
         ></InputFilterText>

@@ -181,14 +181,14 @@ function LayoutSelector({
             className="flex"
             ref={dropdownRef}
           >
-            <div className="bg-secondary-dark flex flex-col gap-2.5 p-2">
+            <div className="bg-[#090909] flex flex-col gap-2.5 p-2 rounded">
               <div className="text-aqua-pale text-xs">Common</div>
 
               <div className="flex gap-4">
                 {commonPresets.map((preset, index) => (
                   <LayoutPreset
                     key={index}
-                    classNames="hover:bg-primary-dark group p-1 cursor-pointer"
+                    classNames="hover:bg-primary-light hover:text-black group p-1 cursor-pointer"
                     icon={preset.icon}
                     commandOptions={preset.commandOptions}
                     onSelection={onSelection}
@@ -204,7 +204,7 @@ function LayoutSelector({
                 {advancedPresets.map((preset, index) => (
                   <LayoutPreset
                     key={index + commonPresets.length}
-                    classNames="hover:bg-primary-dark group flex gap-2 p-1 cursor-pointer"
+                    classNames="hover:bg-primary-light hover:text-black group flex gap-2 p-1 cursor-pointer"
                     icon={preset.icon}
                     title={preset.title}
                     disabled={preset.disabled}
@@ -215,7 +215,7 @@ function LayoutSelector({
               </div>
             </div>
 
-            <div className="bg-primary-dark flex flex-col gap-2.5 border-l-2 border-solid border-black  p-2">
+            <div className="bg-[#090909] flex flex-col gap-2.5 border-l-2 border-solid border-[#323132]  p-2">
               <div className="text-aqua-pale text-xs">Custom</div>
               <DropdownContent
                 rows={rows}

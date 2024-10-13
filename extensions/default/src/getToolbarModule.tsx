@@ -9,7 +9,7 @@ const getClassName = isToggled => {
   return {
     className: isToggled
       ? '!text-primary-active'
-      : '!text-common-bright hover:!bg-primary-dark hover:text-primary-light',
+      : '!text-common-bright hover:!bg-[#090909] hover:text-primary-light',
   };
 };
 

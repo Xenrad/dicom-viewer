@@ -24,7 +24,7 @@ export function VolumeRenderingQuality({
 
   const calculateBackground = value => {
     const percentage = ((value - 0) / (1 - 0)) * 100;
-    return `linear-gradient(to right, #5acce6 0%, #5acce6 ${percentage}%, #3a3f99 ${percentage}%, #3a3f99 100%)`;
+    return `linear-gradient(to right, #C2F0D7 0%, #C2F0D7 ${percentage}%, #3a3f99 ${percentage}%, #3a3f99 100%)`;
   };
 
   useEffect(() => {
@@ -62,7 +62,7 @@ export function VolumeRenderingQuality({
             onChange={e => onChange(parseInt(e.target.value, 10))}
             style={{
               background: calculateBackground((quality - min) / (max - min)),
-              '--thumb-inner-color': '#5acce6',
+              '--thumb-inner-color': '#C2F0D7',
               '--thumb-outer-color': '#090c29',
             }}
           />

@@ -47,7 +47,7 @@ module.exports = {
       },
 
       primary: {
-        light: '#5acce6',
+        light: '#C2F0D7',
         main: '#0944b3',
         dark: '#090c29',
         active: '#348cfd',
@@ -86,7 +86,7 @@ You can also use the color variable like before. For instance:
 ```js
 primary: {
   default: ‘var(--default-color)‘,
-  light: ‘#5ACCE6’,
+  light: ‘#C2F0D7’,
   main: ‘#0944B3’,
   dark: ‘#090C29’,
   active: ‘#348CFD’,

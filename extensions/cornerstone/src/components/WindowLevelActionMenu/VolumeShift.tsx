@@ -52,7 +52,7 @@ export function VolumeShift({
 
   const calculateBackground = value => {
     const percentage = ((value - 0) / (1 - 0)) * 100;
-    return `linear-gradient(to right, #5acce6 0%, #5acce6 ${percentage}%, #3a3f99 ${percentage}%, #3a3f99 100%)`;
+    return `linear-gradient(to right, #C2F0D7 0%, #C2F0D7 ${percentage}%, #3a3f99 ${percentage}%, #3a3f99 100%)`;
   };
 
   return (
@@ -82,7 +82,7 @@ export function VolumeShift({
             step={step}
             style={{
               background: calculateBackground((shift - minShift) / (maxShift - minShift)),
-              '--thumb-inner-color': '#5acce6',
+              '--thumb-inner-color': '#C2F0D7',
               '--thumb-outer-color': '#090c29',
             }}
           />
