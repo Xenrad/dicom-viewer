@@ -16,7 +16,7 @@ export function updateAuthServiceAndCleanUrl(
 
   if (useNonURLBearerToken) {
     // function to get the token
-    bearerToken = "token";
+    bearerToken = appConfig?.authentication?.getToken();
   } else if (token) {
     bearerToken = token;
   }

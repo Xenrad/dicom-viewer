@@ -28,7 +28,7 @@ const enabledEffectClasses = {
   ),
   [ButtonEnums.type.secondary]: classnames(
     baseEnabledEffectClasses,
-    'bg-[#333333] active:border active:border-primary-light'
+    'bg-[#333333] text-white active:border active:border-primary-light'
   ),
 };
 
@@ -42,7 +42,6 @@ const enabledClasses = {
   ),
   [ButtonEnums.type.secondary]: classnames(
     'bg-primary-light',
-    baseEnabledClasses,
     enabledEffectClasses[ButtonEnums.type.secondary]
   ),
 };
