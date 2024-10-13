@@ -27,7 +27,7 @@ export type CinePlayerProps = {
 };
 
 const fpsButtonClassNames =
-  'cursor-pointer text-primary-active active:text-primary-light hover:bg-customblue-300 w-4 flex items-center justify-center';
+  'cursor-pointer text-primary-active active:text-primary-light hover:bg-customblue-300 hover:text-black w-4 flex items-center justify-center';
 
 const CinePlayer: React.FC<CinePlayerProps> = ({
   className,
@@ -95,12 +95,12 @@ const CinePlayer: React.FC<CinePlayerProps> = ({
       )}
       <div
         className={
-          'border-secondary-light/60 bg-primary-dark inline-flex select-none items-center gap-2 rounded border px-2 py-2'
+          'border-[#323132] bg-[#090909] inline-flex select-none items-center gap-2 rounded border px-2 py-2'
         }
       >
         <Icon
           name={getPlayPauseIconName()}
-          className="active:text-primary-light hover:bg-customblue-300 cursor-pointer text-white hover:rounded"
+          className="hover:bg-customblue-300 hover:text-black cursor-pointer text-white hover:rounded"
           onClick={() => onPlayPauseChange(!isPlaying)}
         />
         {isDynamic && dynamicInfo && (
@@ -114,7 +114,7 @@ const CinePlayer: React.FC<CinePlayerProps> = ({
           </div>
         )}
 
-        <div className="border-secondary-light ml-4 flex h-6 items-stretch gap-1 rounded border">
+        <div className="border-[#323132] ml-4 flex h-6 items-stretch gap-1 rounded border">
           <div
             className={`${fpsButtonClassNames} rounded-l`}
             onClick={() => handleSetFrameRate(frameRate - 1)}
@@ -155,7 +155,7 @@ const CinePlayer: React.FC<CinePlayerProps> = ({
         </div>
         <Icon
           name="icon-close"
-          className="text-primary-active active:text-primary-light hover:bg-customblue-300 cursor-pointer hover:rounded"
+          className="active:text-primary-light hover:bg-customblue-300 hover:text-black cursor-pointer hover:rounded"
           onClick={onClose}
         />
       </div>

@@ -6,6 +6,9 @@ window.config = {
   extensions: [],
   modes: [],
   showStudyList: true,
+  authentication: {
+    useNonURLBearerToken: true,
+  },
   // below flag is for performance reasons, but it might not work for all servers
   showWarningMessageForCrossOrigin: true,
   showCPUFallbackMessage: true,
@@ -20,9 +23,9 @@ window.config = {
       configuration: {
         friendlyName: 'dcmjs DICOMWeb Server',
         name: 'DCM4CHEE',
-        wadoUriRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoUriRoot: 'http://localhost:4400/dcm4chee-arc/aets/DCM4CHEE/wado',
+        qidoRoot: 'http://localhost:4400/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoRoot: 'http://localhost:4400/dcm4chee-arc/aets/DCM4CHEE/rs',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         imageRendering: 'wadouri',

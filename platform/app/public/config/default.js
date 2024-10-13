@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+z/* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 /** @type {AppTypes.Config} */
 

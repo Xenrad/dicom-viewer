@@ -66,11 +66,10 @@ export default function ModeRoute({
   const { extensions, sopClassHandlers, hotkeys: hotkeyObj, hangingProtocol } = mode;
 
   const runTimeHangingProtocolId = lowerCaseSearchParams.get('hangingprotocolid');
-  const token = lowerCaseSearchParams.get('token');
 
-  if (token) {
-    updateAuthServiceAndCleanUrl(token, location, userAuthenticationService);
-  }
+  const token = lowerCaseSearchParams.get('token');
+  updateAuthServiceAndCleanUrl(appConfig, token, location, userAuthenticationService);
+
 
   // Preserve the old array interface for hotkeys
   const hotkeys = Array.isArray(hotkeyObj) ? hotkeyObj : hotkeyObj?.hotkeys;

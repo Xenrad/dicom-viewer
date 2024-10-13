@@ -5,21 +5,32 @@
  * @param userAuthenticationService - The user authentication service instance.
  */
 export function updateAuthServiceAndCleanUrl(
+  appConfig: any,
   token: string,
   location: any,
   userAuthenticationService: any
 ): void {
-  if (!token) {
-    return;
+
+  const useNonURLBearerToken = appConfig?.authentication?.useNonURLBearerToken;
+  let bearerToken: string | null = null;
+
+  if (useNonURLBearerToken) {
+    // function to get the token
+    bearerToken = "token";
+  } else if (token) {
+    bearerToken = token;
   }
 
-  // if a token is passed in, set the userAuthenticationService to use it
-  // for the Authorization header for all requests
-  userAuthenticationService.setServiceImplementation({
-    getAuthorizationHeader: () => ({
-      Authorization: 'Bearer ' + token,
-    }),
-  });
+  if (bearerToken) {
+    // if a token is passed in, set the userAuthenticationService to use it
+    // for the Authorization header for all requests
+
+    userAuthenticationService.setServiceImplementation({
+      getAuthorizationHeader: () => ({
+        Authorization: 'Bearer ' + bearerToken,
+      }),
+    });
+  }
 
   // Create a URL object with the current location
   const urlObj = new URL(window.location.origin + window.location.pathname + location.search);
