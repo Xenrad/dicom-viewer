@@ -40,8 +40,8 @@ export default class PortalTooltipCard extends Component {
   margin = 15;
 
   defaultArrowStyle = {
-    color: '#090c29', // primary-dark
-    borderColor: 'rgba(58, 63, 153, 1)', // secondary-light
+    color: '#090909', // primary-dark
+    borderColor: '#323132', // secondary-light
   };
 
   rootRef = React.createRef();

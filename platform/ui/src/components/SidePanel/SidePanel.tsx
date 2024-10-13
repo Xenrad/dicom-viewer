@@ -23,7 +23,7 @@ const gridHorizontalPadding = 10;
 const tabSpacerWidth = 2;
 
 const baseClasses =
-  'transition-all duration-300 ease-in-out justify-start box-content flex flex-col';
+  'transition-all duration-300 ease-in-out justify-start box-content flex flex-col pb-2';
 
 const classesMap = {
   open: {
@@ -153,7 +153,7 @@ const createBaseStyle = (expandedWidth: number) => {
     // top by the same top offset as the viewport grid. Also adjust the height so that there is no overflow.
     position: 'relative',
     top: '0.2%',
-    height: '99.8%',
+    height: '97.2%',
   };
 };
 const SidePanel = ({
@@ -384,7 +384,7 @@ const SidePanel = ({
     >
       {panelOpen ? (
         <>
-          <div className="divide-y divide-[#323132] rounded-xl bg-[#1C1C1E]">
+          <div className="divide-y divide-[#323132] rounded-xl bg-[#1C1C1E] flex flex-col max-h-full border border-[#323132]">
             {getOpenStateComponent()}
             {tabs.map((tab, tabIndex) => {
               if (tabIndex === activeTabIndex) {

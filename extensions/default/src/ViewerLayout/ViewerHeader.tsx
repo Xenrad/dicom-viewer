@@ -121,7 +121,7 @@ function ViewerHeader({
       appConfig={appConfig}
     >
       <ErrorBoundary context="Primary Toolbar">
-        <div className="bg-[#1c1c1e] flex justify-center gap-[4px] rounded-xl px-2 py-1">
+        <div className="bg-[#1c1c1e] flex justify-center gap-1 rounded-lg p-1 border border-[#323132]">
           <Toolbar servicesManager={servicesManager} />
         </div>
       </ErrorBoundary>
