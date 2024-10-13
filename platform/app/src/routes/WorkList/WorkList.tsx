@@ -11,6 +11,7 @@ import filtersMeta from './filtersMeta.js';
 import { useAppConfig } from '@state';
 import { useDebounce, useSearchParams } from '@hooks';
 import { utils, hotkeys } from '@ohif/core';
+import { ArrowRight } from 'lucide-react';
 
 import {
   Icon,
@@ -320,7 +321,7 @@ function WorkList({
                 name="group-layers"
                 className={classnames('mr-2 inline-flex w-4', {
                   'text-primary-active': isExpanded,
-                  'text-secondary-light': !isExpanded,
+                  'text-white/70': !isExpanded,
                 })}
               />
               {instances}
@@ -415,15 +416,10 @@ function WorkList({
                           </div>
                         ) : null
                       }
-                      startIcon={
-                        <Icon
-                          className="!h-[20px] !w-[20px] text-black"
-                          name={isValidMode ? 'launch-arrow' : 'launch-info'}
-                        />
-                      } // launch-arrow | launch-info
+                      startIcon={<ArrowRight className="h-3 w-3 text-black" />} // launch-arrow | launch-info
                       onClick={() => {}}
                       dataCY={`mode-${mode.routeName}-${studyInstanceUid}`}
-                      className={isValidMode ? 'text-[13px]' : 'bg-[#222d44] text-[13px]'}
+                      className={isValidMode ? 'text-[13px]' : '!text-white/70 text-[13px]'}
                     >
                       {mode.displayName}
                     </Button>

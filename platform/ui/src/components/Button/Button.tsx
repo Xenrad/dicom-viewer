@@ -76,7 +76,7 @@ const Button = ({
   const startIcon = startIconProp && (
     <>
       {React.cloneElement(startIconProp, {
-        className: classnames('w-4 h-4 fill-current', startIconProp?.props?.className),
+        className: classnames('w-4 h-4 fill-primary-light', startIconProp?.props?.className),
       })}
     </>
   );
@@ -84,7 +84,7 @@ const Button = ({
   const endIcon = endIconProp && (
     <>
       {React.cloneElement(endIconProp, {
-        className: classnames('w-4 h-4 fill-current', endIconProp?.props?.className),
+        className: classnames('w-4 h-4 fill-primary-light', endIconProp?.props?.className),
       })}
     </>
   );
