@@ -85,8 +85,8 @@ const StudyListFilter = ({
           </div>
         </div>
       </div>
-      <div className="sticky -top-1 z-10 mx-auto border-b border-[#323132]">
-        <div className="bg-[#1c1c1e] py-3 rounded-t-xl">
+      <div className="sticky top-0 z-10 flex">
+        <div className="container mx-auto grow rounded-t-xl border-b border-[#323132] bg-[#1c1c1e] py-3">
           <InputGroup
             inputMeta={filtersMeta}
             values={filterValues}
@@ -99,7 +99,9 @@ const StudyListFilter = ({
         {numOfStudies > 100 && (
           <div className="container m-auto">
             <div className="bg-primary-main rounded-b py-1 text-center text-base">
-              <p className="text-white">{t('Filter list to 100 studies or less to enable sorting')}</p>
+              <p className="text-white">
+                {t('Filter list to 100 studies or less to enable sorting')}
+              </p>
             </div>
           </div>
         )}
