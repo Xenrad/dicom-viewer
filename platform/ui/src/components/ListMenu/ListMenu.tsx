@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const flex = 'flex flex-row justify-between items-center';
-const theme = 'bg-indigo-dark text-white';
+const theme = 'bg-[#090909] text-white';
 
 const ListMenu = ({ items = [], renderer, onClick }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
@@ -30,7 +30,7 @@ const ListMenu = ({ items = [], renderer, onClick }) => {
   };
 
   return (
-    <div className="bg-[#090909] border border-[#323132] flex flex-col gap-[4px] rounded-md p-1">
+    <div className="flex flex-col gap-[4px] rounded-md border border-[#323132] bg-[#090909] p-1">
       {items.map((item, index) => {
         return (
           <ListItem
