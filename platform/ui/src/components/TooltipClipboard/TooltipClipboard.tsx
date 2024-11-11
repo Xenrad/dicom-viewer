@@ -144,7 +144,7 @@ const TooltipClipboard = ({ children, text }) => {
           {message || (
             <>
               {children}
-              <div className="ml-2 border-l border-[#C2F0D7] pl-2">
+              <div className="border-aqua-pale ml-2 border-l pl-2">
                 <Icon
                   name="clipboard"
                   className="w-4 text-white"

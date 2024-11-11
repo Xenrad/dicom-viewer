@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 /** @type {AppTypes.Config} */
+window.getAuthenticationToken = () => 'token';
+
 window.config = {
   routerBasename: '/',
   extensions: [],
@@ -8,7 +10,7 @@ window.config = {
   showStudyList: true,
   authentication: {
     useNonURLBearerToken: true,
-    getToken: () => "token"
+    getToken: window.getAuthenticationToken,
   },
   // below flag is for performance reasons, but it might not work for all servers
   showWarningMessageForCrossOrigin: true,
@@ -35,6 +37,11 @@ window.config = {
         supportsFuzzyMatching: false,
         supportsWildcard: false,
         omitQuotationForMultipartRequest: true,
+        requestOptions: {
+          requestHeaders: {
+            Authorization: window.getAuthenticationToken(),
+          },
+        },
       },
     },
     {

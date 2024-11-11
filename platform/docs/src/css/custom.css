@@ -47,7 +47,7 @@ html[data-theme='dark'] .header-github-link:before {
 
 html[data-theme='dark'] {
   --ifm-menu-link-sublist-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,0.4)" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>');
-  --ifm-color-primary: #C2F0D7;
+  --ifm-color-primary: #08BC51;
   --ifm-color-primary-dark: #3ec3e2;
   --ifm-color-primary-darker: #30bfe0;
   --ifm-color-primary-darkest: #1da4c3;

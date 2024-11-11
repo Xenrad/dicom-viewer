@@ -25,21 +25,21 @@ module.exports = {
       inherit: 'inherit',
 
       aqua: {
-        pale: '#C2F0D7',
+        pale: '#08BC51',
       },
 
       primary: {
-        // light: '#C2F0D7',
-        light: '#C2F0D7',
-        main: '#C2F0D7',
+        // light: '#08BC51',
+        light: '#08BC51',
+        main: '#08BC51',
         dark: '#090909',
-        active: '#C2F0D7',
+        active: '#08BC51',
       },
 
       inputfield: {
         main: '#3a3f99',
         disabled: '#2b166b',
-        focus: '#C2F0D7',
+        focus: '#08BC51',
         placeholder: '#39383f',
       },
 
@@ -64,16 +64,16 @@ module.exports = {
       },
 
       customblue: {
-        10: '#C2F0D7',
-        20: '#C2F0D7',
-        30: '#C2F0D7',
-        40: '#C2F0D7',
-        50: '#C2F0D7',
-        80: '#C2F0D7',
-        100: '#C2F0D7',
-        200: '#C2F0D7',
-        300: '#C2F0D7',
-        400: '#C2F0D7',
+        10: '#08BC51',
+        20: '#08BC51',
+        30: '#08BC51',
+        40: '#08BC51',
+        50: '#08BC51',
+        80: '#08BC51',
+        100: '#08BC51',
+        200: '#08BC51',
+        300: '#08BC51',
+        400: '#08BC51',
       },
 
       customgray: {
@@ -149,7 +149,7 @@ module.exports = {
       blue: {
         100: '#ebf8ff',
         200: '#bee3f8',
-        300: '#C2F0D7',
+        300: '#08BC51',
         400: '#63b3ed',
         500: '#4299e1',
         600: '#3182ce',

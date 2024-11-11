@@ -60,7 +60,7 @@
 }
 .scroll .scroll-holder .imageSlider::-webkit-slider-thumb {
   -webkit-appearance: none !important;
-  background-color: #163239;
+  background-color: #08bc504a;
   border: none;
   border-radius: 57px;
   cursor: -webkit-grab;
@@ -69,11 +69,11 @@
   width: 39px;
 }
 .scroll .scroll-holder .imageSlider::-webkit-slider-thumb:active {
-  background-color: #20a5d6;
+  background-color: #08BC51;
   cursor: -webkit-grabbing;
 }
 .scroll .scroll-holder .imageSlider::-moz-range-thumb {
-  background-color: #163239;
+  background-color: #08bc504a;
   border: none;
   border-radius: 57px;
   cursor: -moz-grab;
@@ -82,11 +82,11 @@
   z-index: 7;
 }
 .scroll .scroll-holder .imageSlider::-moz-range-thumb:active {
-  background-color: #20a5d6;
+  background-color: #08BC51;
   cursor: -moz-grabbing;
 }
 .scroll .scroll-holder .imageSlider::-ms-thumb {
-  background-color: #163239;
+  background-color: #08bc504a;
   border: none;
   border-radius: 57px;
   cursor: ns-resize;
@@ -94,7 +94,7 @@
   width: 39px;
 }
 .scroll .scroll-holder .imageSlider::-ms-thumb:active {
-  background-color: #20a5d6;
+  background-color: #08BC51;
 }
 .scroll .scroll-holder .imageSlider::-ms-tooltip {
   display: none;

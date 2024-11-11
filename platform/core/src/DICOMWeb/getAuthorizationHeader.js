@@ -1,5 +1,4 @@
 import 'isomorphic-base64';
-import user from '../user';
 
 /**
  * Returns the Authorization header as part of an Object.
