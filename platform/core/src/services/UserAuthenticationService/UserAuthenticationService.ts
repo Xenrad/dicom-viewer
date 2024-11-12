@@ -15,7 +15,14 @@ class UserAuthenticationService extends PubSubService {
     _getState: () => console.warn('getState() NOT IMPLEMENTED'),
     _setUser: () => console.warn('_setUser() NOT IMPLEMENTED'),
     _getUser: () => console.warn('_getUser() NOT IMPLEMENTED'),
-    _getAuthorizationHeader: () => {}, // TODO: Implement this method
+    _getAuthorizationHeader: () => {
+      if (window?.config?.authentication?.useNonURLBearerToken) {
+        const token = window?.config?.authentication?.getToken();
+        return {
+          Authorization: `Bearer ${token}`,
+        };
+      }
+    }, // TODO: Implement this method
     _handleUnauthenticated: () => console.warn('_handleUnauthenticated() NOT IMPLEMENTED'),
     _reset: () => console.warn('reset() NOT IMPLEMENTED'),
     _set: () => console.warn('set() NOT IMPLEMENTED'),

@@ -37,11 +37,6 @@ window.config = {
         supportsFuzzyMatching: false,
         supportsWildcard: false,
         omitQuotationForMultipartRequest: true,
-        requestOptions: {
-          requestHeaders: {
-            Authorization: window.getAuthenticationToken(),
-          },
-        },
       },
     },
     {
