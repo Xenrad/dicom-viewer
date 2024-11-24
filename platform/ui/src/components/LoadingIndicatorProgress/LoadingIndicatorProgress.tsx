@@ -1,8 +1,12 @@
 import React from 'react';
-import classNames from 'classnames';
+import { Loader as LucideLoader } from 'lucide-react';
 
-import Icon from '../Icon';
-import ProgressLoadingBar from '../ProgressLoadingBar';
+type LoadingIndicatorProgressProps = {
+  className?: string;
+  textBlock?: React.ReactNode;
+  progress?: number;
+  size?: number;
+};
 
 /**
  *  A React component that renders a loading indicator.
@@ -10,23 +14,12 @@ import ProgressLoadingBar from '../ProgressLoadingBar';
  * if progress is provided, it will render a progress bar
  * Optionally a textBlock can be provided to display a message
  */
-function LoadingIndicatorProgress({ className, textBlock, progress }) {
+function LoadingIndicatorProgress({ className, size = 24 }: LoadingIndicatorProgressProps) {
   return (
-    <div
-      className={classNames(
-        'absolute top-0 left-0 z-50 flex flex-col items-center justify-center space-y-5',
-        className
-      )}
-    >
-      <Icon
-        name="loading-ohif-mark"
-        className="h-12 w-12 text-white"
-      />
-      <div className="w-48">
-        <ProgressLoadingBar progress={progress} />
-      </div>
-      {textBlock}
-    </div>
+    <LucideLoader
+      className={`text-primary/80 animate-spin ${className}`}
+      size={size}
+    />
   );
 }
 
