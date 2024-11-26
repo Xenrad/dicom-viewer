@@ -17,7 +17,7 @@ type LoadingIndicatorProgressProps = {
 function LoadingIndicatorProgress({ className, size = 24 }: LoadingIndicatorProgressProps) {
   return (
     <LucideLoader
-      className={`text-primary/80 animate-spin ${className}`}
+      className={`text-aqua-pale h-8 w-8 animate-spin ${className}`}
       size={size}
     />
   );

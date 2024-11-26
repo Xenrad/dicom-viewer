@@ -419,7 +419,7 @@ function WorkList({
                       startIcon={<ArrowRight className="h-3 w-3 text-black" />} // launch-arrow | launch-info
                       onClick={() => {}}
                       dataCY={`mode-${mode.routeName}-${studyInstanceUid}`}
-                      className={isValidMode ? 'text-[13px]' : '!text-white/70 text-[13px]'}
+                      className={isValidMode ? 'text-[13px]' : 'text-[13px] !text-white/70'}
                     >
                       {mode.displayName}
                     </Button>

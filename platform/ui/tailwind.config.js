@@ -19,7 +19,7 @@ module.exports = {
     colors: {
       overlay: 'rgba(0, 0, 0, 0.8)',
       transparent: 'transparent',
-      black: '#000',
+      black: '#0A0A0A',
       white: '#fff',
       initial: 'initial',
       inherit: 'inherit',
@@ -32,7 +32,7 @@ module.exports = {
         // light: '#08BC51',
         light: '#08BC51',
         main: '#08BC51',
-        dark: '#090909',
+        dark: '#0A0A0A',
         active: '#08BC51',
       },
 
@@ -46,7 +46,7 @@ module.exports = {
       secondary: {
         light: '#3a3f99',
         main: '#2b166b',
-        dark: '#090909',
+        dark: '#0A0A0A',
         active: '#1f1f27',
       },
 
