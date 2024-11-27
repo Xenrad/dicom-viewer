@@ -1,5 +1,6 @@
 import React from 'react';
 import { Loader as LucideLoader } from 'lucide-react';
+import classNames from 'classnames';
 
 type LoadingIndicatorProgressProps = {
   className?: string;
@@ -16,10 +17,17 @@ type LoadingIndicatorProgressProps = {
  */
 function LoadingIndicatorProgress({ className, size = 24 }: LoadingIndicatorProgressProps) {
   return (
-    <LucideLoader
-      className={`text-aqua-pale h-8 w-8 animate-spin ${className}`}
-      size={size}
-    />
+    <div
+      className={classNames(
+        'absolute top-0 left-0 z-50 flex flex-col items-center justify-center space-y-5',
+        className
+      )}
+    >
+      <LucideLoader
+        className={`text-aqua-pale h-8 w-8 animate-spin ${className}`}
+        size={size}
+      />
+    </div>
   );
 }
 
