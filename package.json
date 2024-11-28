@@ -19,7 +19,6 @@
   "scripts": {
     "cm": "npx git-cz",
     "build": "lerna run build:viewer --stream",
-    "build:dev": "lerna run build:dev --stream",
     "build:ci": "lerna run build:viewer:ci --stream",
     "build:qa": "lerna run build:viewer:qa --stream",
     "clean": "npx lerna run clean --stream",
@@ -58,6 +57,7 @@
     "lerna:customVersion": "node version.mjs",
     "link-list": "npm ls --depth=0 --link=true",
     "build:local": "lerna run build:local --stream",
+    "build:dev": "lerna run build:dev --stream",
     "build:prod": "lerna run build:prod --stream",
     "dev:local": "lerna run dev:local --stream"
   },
