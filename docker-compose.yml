@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  dicom-viewer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      dicom-network:
+    environment:
+      PORT: 4013
+    ports:
+      - 4013:4013
+
+networks:
+  dicom-network:
+    external: true

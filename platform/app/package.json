@@ -43,9 +43,9 @@
     "test:unit:ci": "jest --ci --runInBand --collectCoverage",
     "ci:generateSuccessVersion": "node -p -e \"require('./package.json').version\" > success_version.txt",
 
-    "build:local": "cross-env NODE_ENV=production APP_CONFIG=config/local.js yarn run build",
-    "build:prod": "cross-env NODE_ENV=production APP_CONFIG=config/prod.js yarn run build",
-    "dev:local": "cross-env NODE_ENV=production APP_CONFIG=config/local.js webpack serve --config .webpack/webpack.pwa.js"
+    "build:local": "cross-env NODE_ENV=production PUBLIC_URL=/viewer/ APP_CONFIG=config/local.js yarn run build",
+    "build:prod": "cross-env NODE_ENV=production PUBLIC_URL=/viewer/ APP_CONFIG=config/prod.js yarn run build",
+    "dev:local": "cross-env NODE_ENV=production PUBLIC_URL=/viewer/ APP_CONFIG=config/local.js webpack serve --config .webpack/webpack.pwa.js"
   },
   "files": [
     "dist",

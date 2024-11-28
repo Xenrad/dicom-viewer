@@ -1,10 +1,16 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 /** @type {AppTypes.Config} */
-window.getAuthenticationToken = () => 'token';
+window.getAuthenticationToken = () => {
+  const store = localStorage.getItem('auth-storage');
+  const parsedStore = JSON.parse(store);
+  const token = parsedStore?.state?.token;
+  console.log('token', token);
+  return token;
+};
 
 window.config = {
-  routerBasename: '/',
+  routerBasename: '/viewer',
   extensions: [],
   modes: [],
   showStudyList: true,
@@ -26,9 +32,9 @@ window.config = {
       configuration: {
         friendlyName: 'dcmjs DICOMWeb Server',
         name: 'DCM4CHEE',
-        wadoUriRoot: 'http://localhost:4400/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'http://localhost:4400/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'http://localhost:4400/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoUriRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/wado',
+        qidoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         imageRendering: 'wadouri',
