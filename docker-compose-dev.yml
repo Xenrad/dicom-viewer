@@ -9,8 +9,6 @@ services:
       dicom-network:
     environment:
       PORT: ${VIEWER_PORT}
-    ports:
-      - ${VIEWER_PORT}:${VIEWER_PORT}
 
 networks:
   dicom-network:
