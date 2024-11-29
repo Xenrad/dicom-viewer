@@ -32,9 +32,9 @@ window.config = {
       configuration: {
         friendlyName: 'dcmjs DICOMWeb Server',
         name: 'DCM4CHEE',
-        wadoUriRoot: 'http://dicom.xenrad.ng/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'http://dicom.xenrad.ng/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'http://dicom.xenrad.ng/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoUriRoot: 'https://dicom.xenrad.ng/dcm4chee-arc/aets/DCM4CHEE/wado',
+        qidoRoot: 'https://dicom.xenrad.ng/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoRoot: 'https://dicom.xenrad.ng/dcm4chee-arc/aets/DCM4CHEE/rs',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         imageRendering: 'wadouri',
