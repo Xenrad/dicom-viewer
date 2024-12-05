@@ -4,13 +4,11 @@ services:
   dicom-viewer:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./.docker/contexts/${DOCKERFILE:-Dockerfile}
     networks:
       dicom-network:
     environment:
-      PORT: 4013
-    ports:
-      - 4013:4013
+      PORT: ${VIEWER_PORT}
 
 networks:
   dicom-network:

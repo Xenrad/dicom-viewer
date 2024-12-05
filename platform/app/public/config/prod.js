@@ -1,9 +1,23 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+// @ts-nocheck
 /** @type {AppTypes.Config} */
+window.getAuthenticationToken = () => {
+  const store = localStorage.getItem('auth-storage');
+  const parsedStore = JSON.parse(store);
+  const token = parsedStore?.state?.token;
+  console.log('token', token);
+  return token;
+};
+
 window.config = {
-  routerBasename: '/',
+  routerBasename: '/viewer',
   extensions: [],
   modes: [],
   showStudyList: true,
+  authentication: {
+    useNonURLBearerToken: true,
+    getToken: window.getAuthenticationToken,
+  },
   // below flag is for performance reasons, but it might not work for all servers
   showWarningMessageForCrossOrigin: true,
   showCPUFallbackMessage: true,
@@ -18,9 +32,9 @@ window.config = {
       configuration: {
         friendlyName: 'dcmjs DICOMWeb Server',
         name: 'DCM4CHEE',
-        wadoUriRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/wado',
-        qidoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
-        wadoRoot: 'http://localhost:8080/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoUriRoot: 'https://dicom.xenrad.io/dcm4chee-arc/aets/DCM4CHEE/wado',
+        qidoRoot: 'https://dicom.xenrad.io/dcm4chee-arc/aets/DCM4CHEE/rs',
+        wadoRoot: 'https://dicom.xenrad.io/dcm4chee-arc/aets/DCM4CHEE/rs',
         qidoSupportsIncludeField: true,
         supportsReject: true,
         imageRendering: 'wadouri',
