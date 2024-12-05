@@ -58,7 +58,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 # ENV GENERATE_SOURCEMAP=false
 # ENV REACT_APP_CONFIG=config/default.js
 
-RUN yarn run build:dev --verbose
+RUN yarn run build:prod --verbose
 
 # Stage 3: Bundle the built application into a Docker container
 # which runs Nginx using Alpine Linux
